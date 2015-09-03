@@ -44,7 +44,7 @@ public class GameModeCommands {
         try {
             gameType = GameType.values()[mode];
             player.setGameType(GameType.getByID(mode));
-            player.addChatMessage(new ChatComponentText("You have switched to " + GameType.getByID(mode) + " mode."));
+            player.addChatMessage(new ChatComponentText((tr("gameModeCommands.gm1")) + GameType.getByID(mode) + (tr("gameModeCommands.gm2"))));
         } catch (ArrayIndexOutOfBoundsException e) {
             throw new CommandException("You specified an invalid gamemode.");
         }
